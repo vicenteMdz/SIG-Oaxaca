@@ -120,3 +120,4 @@ C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug
 C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
 C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
 C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Videos.resources

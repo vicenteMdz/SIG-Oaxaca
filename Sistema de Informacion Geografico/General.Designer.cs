@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(General));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolCursor = new System.Windows.Forms.ToolStripButton();
-            this.toolZoomExtent = new System.Windows.Forms.ToolStripButton();
-            this.toolZoomOut = new System.Windows.Forms.ToolStripButton();
-            this.toolZoomInt = new System.Windows.Forms.ToolStripButton();
-            this.toolMove = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -77,6 +72,11 @@
             this.hundimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agritamientosDeTerrenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axMap1 = new AxMapWinGIS.AxMap();
+            this.toolCursor = new System.Windows.Forms.ToolStripButton();
+            this.toolZoomExtent = new System.Windows.Forms.ToolStripButton();
+            this.toolZoomOut = new System.Windows.Forms.ToolStripButton();
+            this.toolZoomInt = new System.Windows.Forms.ToolStripButton();
+            this.toolMove = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -104,55 +104,6 @@
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolCursor
-            // 
-            this.toolCursor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCursor.Image = ((System.Drawing.Image)(resources.GetObject("toolCursor.Image")));
-            this.toolCursor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolCursor.Name = "toolCursor";
-            this.toolCursor.Size = new System.Drawing.Size(23, 22);
-            this.toolCursor.Text = "toolControl";
-            this.toolCursor.Click += new System.EventHandler(this.toolCursor_Click);
-            // 
-            // toolZoomExtent
-            // 
-            this.toolZoomExtent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolZoomExtent.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomExtent.Image")));
-            this.toolZoomExtent.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolZoomExtent.Name = "toolZoomExtent";
-            this.toolZoomExtent.Size = new System.Drawing.Size(23, 22);
-            this.toolZoomExtent.Click += new System.EventHandler(this.toolZoomExtent_Click);
-            // 
-            // toolZoomOut
-            // 
-            this.toolZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolZoomOut.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomOut.Image")));
-            this.toolZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolZoomOut.Name = "toolZoomOut";
-            this.toolZoomOut.Size = new System.Drawing.Size(23, 22);
-            this.toolZoomOut.Text = "toolStripButton2";
-            this.toolZoomOut.Click += new System.EventHandler(this.toolZoomOut_Click);
-            // 
-            // toolZoomInt
-            // 
-            this.toolZoomInt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolZoomInt.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomInt.Image")));
-            this.toolZoomInt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolZoomInt.Name = "toolZoomInt";
-            this.toolZoomInt.Size = new System.Drawing.Size(23, 22);
-            this.toolZoomInt.Text = "toolZoomInt";
-            this.toolZoomInt.Click += new System.EventHandler(this.toolZoomInt_Click);
-            // 
-            // toolMove
-            // 
-            this.toolMove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolMove.Image = ((System.Drawing.Image)(resources.GetObject("toolMove.Image")));
-            this.toolMove.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolMove.Name = "toolMove";
-            this.toolMove.Size = new System.Drawing.Size(23, 22);
-            this.toolMove.Text = "toolStripButton2";
-            this.toolMove.Click += new System.EventHandler(this.toolMove_Click);
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,6 +112,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackgroundImage = global::Sistema_de_Informacion_Geografico.Properties.Resources.fondo;
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -203,6 +155,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Controls.Add(this.menuStrip4);
             this.groupBox1.Controls.Add(this.menuStrip3);
             this.groupBox1.Controls.Add(this.menuStrip2);
@@ -502,6 +455,55 @@
             this.axMap1.Size = new System.Drawing.Size(868, 660);
             this.axMap1.TabIndex = 0;
             this.axMap1.MouseDownEvent += new AxMapWinGIS._DMapEvents_MouseDownEventHandler(this.axMap1_MouseDownEvent);
+            // 
+            // toolCursor
+            // 
+            this.toolCursor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCursor.Image = ((System.Drawing.Image)(resources.GetObject("toolCursor.Image")));
+            this.toolCursor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolCursor.Name = "toolCursor";
+            this.toolCursor.Size = new System.Drawing.Size(23, 22);
+            this.toolCursor.Text = "toolControl";
+            this.toolCursor.Click += new System.EventHandler(this.toolCursor_Click);
+            // 
+            // toolZoomExtent
+            // 
+            this.toolZoomExtent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolZoomExtent.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomExtent.Image")));
+            this.toolZoomExtent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolZoomExtent.Name = "toolZoomExtent";
+            this.toolZoomExtent.Size = new System.Drawing.Size(23, 22);
+            this.toolZoomExtent.Click += new System.EventHandler(this.toolZoomExtent_Click);
+            // 
+            // toolZoomOut
+            // 
+            this.toolZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolZoomOut.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomOut.Image")));
+            this.toolZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolZoomOut.Name = "toolZoomOut";
+            this.toolZoomOut.Size = new System.Drawing.Size(23, 22);
+            this.toolZoomOut.Text = "toolStripButton2";
+            this.toolZoomOut.Click += new System.EventHandler(this.toolZoomOut_Click);
+            // 
+            // toolZoomInt
+            // 
+            this.toolZoomInt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolZoomInt.Image = ((System.Drawing.Image)(resources.GetObject("toolZoomInt.Image")));
+            this.toolZoomInt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolZoomInt.Name = "toolZoomInt";
+            this.toolZoomInt.Size = new System.Drawing.Size(23, 22);
+            this.toolZoomInt.Text = "toolZoomInt";
+            this.toolZoomInt.Click += new System.EventHandler(this.toolZoomInt_Click);
+            // 
+            // toolMove
+            // 
+            this.toolMove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolMove.Image = ((System.Drawing.Image)(resources.GetObject("toolMove.Image")));
+            this.toolMove.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolMove.Name = "toolMove";
+            this.toolMove.Size = new System.Drawing.Size(23, 22);
+            this.toolMove.Text = "toolStripButton2";
+            this.toolMove.Click += new System.EventHandler(this.toolMove_Click);
             // 
             // General
             // 

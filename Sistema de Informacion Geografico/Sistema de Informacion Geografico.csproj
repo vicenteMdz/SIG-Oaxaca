@@ -115,6 +115,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SIGDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Videos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Videos.Designer.cs">
+      <DependentUpon>Videos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ayuda.resx">
       <DependentUpon>ayuda.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registroFenomenos.resx">
       <DependentUpon>registroFenomenos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Videos.resx">
+      <DependentUpon>Videos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +214,8 @@
     <None Include="images\login.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\fondo2.jpg" />
+    <None Include="images\fondo.jpg" />
     <Content Include="SIG.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

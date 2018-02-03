@@ -54,10 +54,10 @@ namespace Sistema_de_Informacion_Geografico
 
         private void entretenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sistema_de_Informacion_Geografico.entretenimiento entretenimiento = new Sistema_de_Informacion_Geografico.entretenimiento();
-            entretenimiento.MdiParent = this;
+            //Sistema_de_Informacion_Geografico.entretenimiento entretenimiento = new Sistema_de_Informacion_Geografico.entretenimiento();
+            //entretenimiento.MdiParent = this;
 
-            entretenimiento.Show();
+            //entretenimiento.Show();
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,6 +74,12 @@ namespace Sistema_de_Informacion_Geografico
             raster.MdiParent = this;
             raster.WindowState = FormWindowState.Maximized;
             raster.Show();
+        }
+
+        private void aprendeConVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Videos ventana = new Videos();
+            ventana.Show();
         }
     }
 }

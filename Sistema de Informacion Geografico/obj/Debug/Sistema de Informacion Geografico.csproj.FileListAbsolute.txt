@@ -97,3 +97,26 @@ C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informa
 C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
 C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
 C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\SIG.mdf
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\SIG_log.ldf
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csprojResolveAssemblyReference.cache
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Form1.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.General.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+C:\Users\Joseph\Documents\SIG-Oaxaca\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache

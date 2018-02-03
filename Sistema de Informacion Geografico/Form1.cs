@@ -27,7 +27,7 @@ namespace Sistema_de_Informacion_Geografico
 
         public void declaraConexion()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["SIGO"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["conectionbd"].ConnectionString;
             SIGO = new SqlConnection(connectionString);
         }
         public void abrirConexion()

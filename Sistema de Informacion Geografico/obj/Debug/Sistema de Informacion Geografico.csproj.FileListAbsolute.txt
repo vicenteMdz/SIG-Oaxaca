@@ -1,0 +1,99 @@
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csprojResolveAssemblyReference.cache
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+c:\users\marifer\documents\visual studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+C:\Users\Marifer\Documents\Visual Studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+C:\Users\Marifer\Documents\Visual Studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+C:\Users\Marifer\Documents\Visual Studio 2012\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csprojResolveAssemblyReference.cache
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+C:\Users\Mirna\Documents\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csprojResolveAssemblyReference.cache
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Form1.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Mirna\Documents\Visual Studio 2015\Projects\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Form1.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.General.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+\\psf\Home\Desktop\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe.config
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Interop.MapWinGIS.dll
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.ResolveComReference.cache
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.exe
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Sistema de Informacion Geografico.pdb
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\Interop.MapWinGIS.dll
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\bin\Debug\AxInterop.MapWinGIS.dll
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csprojResolveAssemblyReference.cache
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.ayuda.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Capas.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.entretenimiento.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Form1.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.General.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Principal.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Properties.Resources.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.Raster.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema_de_Informacion_Geografico.registroFenomenos.resources
+C:\Users\Marifer\Videos\sig\Sistema de Informacion Geografico\Sistema de Informacion Geografico\obj\Debug\Sistema de Informacion Geografico.csproj.GenerateResource.Cache

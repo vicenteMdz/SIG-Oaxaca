@@ -60,7 +60,6 @@ namespace Sistema_de_Informacion_Geografico
         }
         private void btn_Iniciar_Sesion_Click(object sender, EventArgs e)
         {
-
             Acceder();
 
         }
@@ -74,6 +73,8 @@ namespace Sistema_de_Informacion_Geografico
                     abrirConexion();
                     string user = Encrypt.GetMD5(text_User.Text);
                     string password = Encrypt.GetMD5(text_Passw.Text);
+                    Console.WriteLine(user);
+                    Console.WriteLine(password);
                     cmd = new SqlCommand("select * from SIG_USERS where User_name='" +user+ "'and User_password='" +password+ "'", SIGO);
                     dir = cmd.ExecuteReader();
                     if (dir.Read())

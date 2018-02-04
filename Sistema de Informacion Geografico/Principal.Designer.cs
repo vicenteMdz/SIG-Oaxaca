@@ -30,14 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.busquedaGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rasterInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarCapasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarFenomenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entretenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aprendeConVideosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualDeUsuariopdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +44,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.busquedaGeneralToolStripMenuItem,
-            this.rasterInformationToolStripMenuItem,
             this.mostrarCapasToolStripMenuItem,
             this.registrarFenomenosToolStripMenuItem,
             this.entretenimientoToolStripMenuItem,
@@ -63,13 +61,6 @@
             this.busquedaGeneralToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.busquedaGeneralToolStripMenuItem.Text = "Home";
             this.busquedaGeneralToolStripMenuItem.Click += new System.EventHandler(this.busquedaGeneralToolStripMenuItem_Click);
-            // 
-            // rasterInformationToolStripMenuItem
-            // 
-            this.rasterInformationToolStripMenuItem.Name = "rasterInformationToolStripMenuItem";
-            this.rasterInformationToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.rasterInformationToolStripMenuItem.Text = "Raster Información";
-            this.rasterInformationToolStripMenuItem.Click += new System.EventHandler(this.rasterInformationToolStripMenuItem_Click);
             // 
             // mostrarCapasToolStripMenuItem
             // 
@@ -95,18 +86,6 @@
             this.entretenimientoToolStripMenuItem.Text = "¿Cómo funciona?";
             this.entretenimientoToolStripMenuItem.Click += new System.EventHandler(this.entretenimientoToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
-            // 
             // aprendeConVideosToolStripMenuItem
             // 
             this.aprendeConVideosToolStripMenuItem.Name = "aprendeConVideosToolStripMenuItem";
@@ -119,6 +98,18 @@
             this.manualDeUsuariopdfToolStripMenuItem.Name = "manualDeUsuariopdfToolStripMenuItem";
             this.manualDeUsuariopdfToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.manualDeUsuariopdfToolStripMenuItem.Text = "Manual de usuario (pdf)";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -148,7 +139,6 @@
         private System.Windows.Forms.ToolStripMenuItem entretenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rasterInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aprendeConVideosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualDeUsuariopdfToolStripMenuItem;
     }

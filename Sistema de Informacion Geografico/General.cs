@@ -179,5 +179,20 @@ namespace Sistema_de_Informacion_Geografico
 
         }
 
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void axMap1_MouseMoveEvent(object sender, _DMapEvents_MouseMoveEvent e)
+        {
+            double X = 0;
+            double Y = 0;
+            axMap1.PixelToProj(e.x, e.y, ref X, ref Y);
+            //(3) Print the result to the status toolbar.
+            string pointLocation = String.Format("Cursor location ({0},{1}) ", X, Y);
+            toolStripStatusLabel1.Text = pointLocation;
+        }
+
     }
 }

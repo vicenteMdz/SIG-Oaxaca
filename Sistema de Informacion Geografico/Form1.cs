@@ -61,7 +61,6 @@ namespace Sistema_de_Informacion_Geografico
         private void btn_Iniciar_Sesion_Click(object sender, EventArgs e)
         {
             Acceder();
-
         }
 
         private void Acceder()

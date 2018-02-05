@@ -61,68 +61,47 @@ namespace Sistema_de_Informacion_Geografico
             intHandler1 = axMap1.AddLayer(shapefile1, true);
 
             MarkPoints(axMap1);
-        }
 
-        public void CreatePointShapefile(AxMap axMap1)
-        {
-            //axMap1.Projection = tkMapProjection.PROJECTION_NONE;
-            var sf = new Shapefile();
-            // MWShapeId field will be added to attribute table
-            bool result = sf.CreateNewWithShapeID("", ShpfileType.SHP_POINT);
-            // bounding box for the new shapefile
-            double xMin = 0.0;
-            double yMin = 0.0;
-            double xMax = 1000.0;
-            double yMax = 1000.0;
-            // the location of points will be random
-            Random rnd = new Random(DateTime.Now.Millisecond);
-            // creating points and inserting them in the shape
-            for (int i = 0; i < 1000; i++)
-            {
-                var pnt = new MapWinGIS.Point();
-                pnt.x = xMin + (xMax - xMin) * rnd.NextDouble();
-                pnt.y = yMin + (yMax - yMin) * rnd.NextDouble();
-                Shape shp = new Shape();
-                shp.Create(ShpfileType.SHP_POINT);
-                int index = 0;
-                shp.InsertPoint(pnt, ref index);
-                sf.EditInsertShape(shp, ref i);
-            }
-            sf.DefaultDrawingOptions.SetDefaultPointSymbol(tkDefaultPointSymbol.dpsStar);
-            // adds shapefile to the map
-            axMap1.AddLayer(sf, true);
-            // save if needed
-            //sf.SaveAs(@"c:\points.shp", null);
+            //Cargar todos los acontecimientos
+
+
+
         }
 
         public void MarkPoints(AxMap axMap1)
         {
-            //axMap1.Projection = tkMapProjection.PROJECTION_GOOGLE_MERCATOR;
-            string filename = @path+"\\data-shp\\base\\Datos.shp";
-            if (!File.Exists(filename))
+            shapefile1 = axMap1.get_Shapefile(intHandler1);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
+            shapefile1 = new Shapefile();
+            if (!shapefile1.CreateNewWithShapeID("", ShpfileType.SHP_POINT))
             {
-                MessageBox.Show("Couldn't file the file: " + filename);
+                MessageBox.Show("Failed to create shapefile: " + shapefile1.ErrorMsg[shapefile1.LastErrorCode]);
                 return;
             }
-            var sf = new Shapefile();
-            sf.Open(filename, null);
-            m_layerHandle = axMap1.AddLayer(sf, true);
-            sf = axMap1.get_Shapefile(m_layerHandle);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
-            sf = new Shapefile();
-            if (!sf.CreateNewWithShapeID("", ShpfileType.SHP_POINT))
-            {
-                MessageBox.Show("Failed to create shapefile: " + sf.ErrorMsg[sf.LastErrorCode]);
-                return;
-            }
-            m_layerHandle = axMap1.AddLayer(sf, true);
-            ShapeDrawingOptions options = sf.DefaultDrawingOptions;
+            intHandler1 = axMap1.AddLayer(shapefile1, true);
+            ShapeDrawingOptions options = shapefile1.DefaultDrawingOptions;
             options.PointType = tkPointSymbolType.ptSymbolPicture;
             options.Picture = this.OpenMarker();
-
-            sf.CollisionMode = tkCollisionMode.AllowCollisions;
+            Shapefile sf = axMap1.get_Shapefile(intHandler1);
+            Shape shp = new Shape();
+            shp.Create(ShpfileType.SHP_POINT);
+            MapWinGIS.Point pnt = new MapWinGIS.Point();
+            pnt.x = -96.5943562;
+            pnt.y = 16.3317796;
+            Console.WriteLine("X:::: " + pnt.x);
+            Console.WriteLine("X:::: " + pnt.y);
+            int index = shp.numPoints;
+            shp.InsertPoint(pnt, ref index);
+            index = sf.NumShapes;
+            if (!sf.EditInsertShape(shp, ref index))
+            {
+                MessageBox.Show("Failed to insert shape: " + sf.ErrorMsg[sf.LastErrorCode]);
+                return;
+            }
+            axMap1.Redraw();
+            /*shapefile1.CollisionMode = tkCollisionMode.AllowCollisions;
             axMap1.SendMouseDown = true;
             axMap1.CursorMode = tkCursorMode.cmNone;
-            axMap1.MouseDownEvent += AxMap1MouseDownEvent;   // change MapEvents to axMap1
+            axMap1.MouseDownEvent += AxMap1MouseDownEvent;   // change MapEvents to axMap1*/
         }
         // <summary>
         // Opens a marker from the file
@@ -153,7 +132,7 @@ namespace Sistema_de_Informacion_Geografico
         {
             if (e.button == 1)          // left button
             {
-                Shapefile sf = axMap1.get_Shapefile(m_layerHandle);
+                Shapefile sf = axMap1.get_Shapefile(intHandler1);
                 Shape shp = new Shape();
                 shp.Create(ShpfileType.SHP_POINT);
                 MapWinGIS.Point pnt = new MapWinGIS.Point();

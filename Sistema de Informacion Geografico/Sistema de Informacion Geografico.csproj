@@ -72,6 +72,7 @@
     <Compile Include="Capas.Designer.cs">
       <DependentUpon>Capas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="entretenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +91,8 @@
     <Compile Include="General.Designer.cs">
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Fenomeno.cs" />
+    <Compile Include="Fenomeno.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +245,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

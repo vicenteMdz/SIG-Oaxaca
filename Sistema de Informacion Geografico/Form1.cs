@@ -45,19 +45,7 @@ namespace Sistema_de_Informacion_Geografico
             }
             catch (Exception ext) { MessageBox.Show(ext.ToString()); }
         }
-        public class Encrypt
-        {
-            public static string GetMD5(string str)
-            {
-                MD5 md5 = MD5CryptoServiceProvider.Create();
-                ASCIIEncoding encoding = new ASCIIEncoding();
-                byte[] stream = null;
-                StringBuilder sb = new StringBuilder();
-                stream = md5.ComputeHash(encoding.GetBytes(str));
-                for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-                return sb.ToString();
-            }
-        }
+        
         private void btn_Iniciar_Sesion_Click(object sender, EventArgs e)
         {
             Acceder();
@@ -72,11 +60,8 @@ namespace Sistema_de_Informacion_Geografico
                     abrirConexion();
                     string user = Encrypt.GetMD5(text_User.Text);
                     string password = Encrypt.GetMD5(text_Passw.Text);
-                    Console.WriteLine(user);
-                    Console.WriteLine(password);
-                    cmd = new SqlCommand("select * from SIG_USERS where User_name='" +user+ "'and User_password='" +password+ "'", SIGO);
-                    dir = cmd.ExecuteReader();
-                    if (dir.Read())
+                    User u = Conexion.findUser(user, password);
+                    if (u!=null)
                     {
                         Sistema_de_Informacion_Geografico.Principal menu = new Sistema_de_Informacion_Geografico.Principal();
                         menu.Show();
@@ -100,7 +85,29 @@ namespace Sistema_de_Informacion_Geografico
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                Conexion.createConecction();
+                Conexion.openConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de conexion a la base de datos", "Advertencia");
+            }
+        }
 
+        public class Encrypt
+        {
+            public static string GetMD5(string str)
+            {
+                MD5 md5 = MD5CryptoServiceProvider.Create();
+                ASCIIEncoding encoding = new ASCIIEncoding();
+                byte[] stream = null;
+                StringBuilder sb = new StringBuilder();
+                stream = md5.ComputeHash(encoding.GetBytes(str));
+                for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+                return sb.ToString();
+            }
         }
     }
 }

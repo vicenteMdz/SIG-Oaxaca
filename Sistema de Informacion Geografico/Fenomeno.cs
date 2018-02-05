@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sistema_de_Informacion_Geografico.Model
+namespace Sistema_de_Informacion_Geografico
 {
     class Acontecimiento
     {

@@ -56,12 +56,12 @@ namespace Sistema_de_Informacion_Geografico
             //set first item select cmbFilter
             cmbFilter.SelectedIndex = 0;
             
-            shapefile1.Open(@String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
+            //shapefile1.Open(@String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
 
-            intHandler1 = axMap1.AddLayer(shapefile1, true);
+            //intHandler1 = axMap1.AddLayer(shapefile1, true);
 
             //Cargar todos los acontecimientos
-
+            ToolTip(axMap1);
             List<Acontecimiento> acontecimientos = Conexion.getAllAcontecimientos();
             if (acontecimientos.Count() == 0)
             {
@@ -78,7 +78,7 @@ namespace Sistema_de_Informacion_Geografico
                     MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
                 }
             }
-           // ToolTip(axMap1);
+            
 
         }
 
@@ -149,8 +149,7 @@ namespace Sistema_de_Informacion_Geografico
                 return;
             }
 
-            Shapefile sf = new Shapefile();
-            sf.Open(filename, null);
+            shapefile1.Open(filename, null);
             if (!shapefile1.StartEditingShapes(true, null))
             {
                 MessageBox.Show("Failed to start edit mode: " + shapefile1.Table.get_ErrorMsg(shapefile1.LastErrorCode));
@@ -160,7 +159,7 @@ namespace Sistema_de_Informacion_Geografico
                 shapefile1.UseQTree = true;
                 shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
 
-                axMap1.AddLayer(shapefile1, true);
+                intHandler1 = axMap1.AddLayer(shapefile1, true);
                 axMap1.SendMouseMove = true;
                 axMap1.ShowRedrawTime = true;
                 axMap1.MapUnits = tkUnitsOfMeasure.umMeters;
@@ -201,7 +200,7 @@ namespace Sistema_de_Informacion_Geografico
                     if (shapes.Length == 1)
                     {
                         string s = "";
-                        for (int i = 0; i < sf.NumFields; i++)
+                        for (int i = 0; i < 1; i++)
                         {
                             s += sf.get_Field(i).Name + ": " + sf.get_CellValue(i, shapes[0]) + "\n";
                         }

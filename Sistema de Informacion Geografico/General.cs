@@ -55,13 +55,10 @@ namespace Sistema_de_Informacion_Geografico
 
             //set first item select cmbFilter
             cmbFilter.SelectedIndex = 0;
-            
-            //shapefile1.Open(@String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
-
-            //intHandler1 = axMap1.AddLayer(shapefile1, true);
 
             //Cargar todos los acontecimientos
             ToolTip(axMap1);
+
             List<Acontecimiento> acontecimientos = Conexion.getAllAcontecimientos();
             if (acontecimientos.Count() == 0)
             {
@@ -92,6 +89,7 @@ namespace Sistema_de_Informacion_Geografico
                 return;
             }
             intHandler1 = axMap1.AddLayer(shapefile1, true);
+            axMap1.set_LayerName(intHandler1, "6353");
             ShapeDrawingOptions options = shapefile1.DefaultDrawingOptions;
             options.PointType = tkPointSymbolType.ptSymbolPicture;
             options.Picture = this.OpenMarker();
@@ -101,8 +99,6 @@ namespace Sistema_de_Informacion_Geografico
             MapWinGIS.Point pnt = new MapWinGIS.Point();
             pnt.x = x;
             pnt.y = y;
-            Console.WriteLine("X:::: " + pnt.x);
-            Console.WriteLine("Y:::: " + pnt.y);
             int index = shp.numPoints;
             shp.InsertPoint(pnt, ref index);
             index = sf.NumShapes;
@@ -157,7 +153,7 @@ namespace Sistema_de_Informacion_Geografico
             else
             {
                 shapefile1.UseQTree = true;
-                shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
+                //shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
 
                 intHandler1 = axMap1.AddLayer(shapefile1, true);
                 axMap1.SendMouseMove = true;
@@ -171,6 +167,7 @@ namespace Sistema_de_Informacion_Geografico
                 Labels labels = axMap1.get_DrawingLabels(m_drawingHandle);
                 labels.FrameVisible = true;
                 labels.FrameType = tkLabelFrameType.lfRectangle;
+                axMap1.ZoomToMaxExtents();
             }
         }
 
@@ -194,16 +191,17 @@ namespace Sistema_de_Informacion_Geografico
                 object result = null;
                 Extents ext = new Extents();
                 ext.SetBounds(projX, projY, 0.0, projX, projY, 0.0);
+                
                 if (sf.SelectShapes(ext, 0.0, SelectMode.INTERSECTION, ref result))
                 {
                     int[] shapes = result as int[];
                     if (shapes.Length == 1)
                     {
                         string s = "";
-                        for (int i = 0; i < 1; i++)
-                        {
-                            s += sf.get_Field(i).Name + ": " + sf.get_CellValue(i, shapes[0]) + "\n";
-                        }
+                        //for (int i = 0; i < sf.NumFields; i++)
+                        //{
+                            s += "Municipio: " + sf.get_CellValue(0, shapes[0]) + "\n";
+                        //}
                         labels.AddLabel(s, e.x + 80, e.y, 0.0, -1);
 
                         Shape shape = sf.get_Shape(shapes[0]);
@@ -212,16 +210,6 @@ namespace Sistema_de_Informacion_Geografico
             }
 
             axMap1.Refresh();
-        }
-
-        private void axMap1_MouseDownEvent(object sender, AxMapWinGIS._DMapEvents_MouseDownEvent e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void axMap1_MouseMoveEvent(object sender, _DMapEvents_MouseMoveEvent e)

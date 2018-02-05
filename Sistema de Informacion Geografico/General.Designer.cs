@@ -36,6 +36,8 @@
             this.toolZoomInt = new System.Windows.Forms.ToolStripButton();
             this.toolMove = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
@@ -79,8 +81,6 @@
             this.hundimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agritamientosDeTerrenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axMap1 = new AxMapWinGIS.AxMap();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -174,7 +174,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -182,6 +181,32 @@
             this.splitContainer1.Size = new System.Drawing.Size(1120, 445);
             this.splitContainer1.SplitterDistance = 277;
             this.splitContainer1.TabIndex = 6;
+            // 
+            // cmbFilter
+            // 
+            this.cmbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilter.FormattingEnabled = true;
+            this.cmbFilter.Items.AddRange(new object[] {
+            "Categoria y tipos de riesgo",
+            "Poblaciones",
+            "Municipios",
+            "Distritos",
+            "Regiones",
+            "Estados"});
+            this.cmbFilter.Location = new System.Drawing.Point(86, 92);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(191, 24);
+            this.cmbFilter.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Filtrar por:";
             // 
             // statusStrip1
             // 
@@ -238,7 +263,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 175);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(242, 156);
+            this.groupBox1.Size = new System.Drawing.Size(257, 156);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorías";
@@ -285,25 +310,25 @@
             // aireToolStripMenuItem
             // 
             this.aireToolStripMenuItem.Name = "aireToolStripMenuItem";
-            this.aireToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aireToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.aireToolStripMenuItem.Text = "Aire";
             // 
             // sueloToolStripMenuItem
             // 
             this.sueloToolStripMenuItem.Name = "sueloToolStripMenuItem";
-            this.sueloToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sueloToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.sueloToolStripMenuItem.Text = "Suelo";
             // 
             // aguaToolStripMenuItem
             // 
             this.aguaToolStripMenuItem.Name = "aguaToolStripMenuItem";
-            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.aguaToolStripMenuItem.Text = "Agua";
             // 
             // alimentosToolStripMenuItem
             // 
             this.alimentosToolStripMenuItem.Name = "alimentosToolStripMenuItem";
-            this.alimentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alimentosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.alimentosToolStripMenuItem.Text = "Alimentos";
             // 
             // menuStrip3
@@ -529,34 +554,7 @@
             this.axMap1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMap1.OcxState")));
             this.axMap1.Size = new System.Drawing.Size(839, 445);
             this.axMap1.TabIndex = 0;
-            this.axMap1.MouseDownEvent += new AxMapWinGIS._DMapEvents_MouseDownEventHandler(this.axMap1_MouseDownEvent);
             this.axMap1.MouseMoveEvent += new AxMapWinGIS._DMapEvents_MouseMoveEventHandler(this.axMap1_MouseMoveEvent);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Filtrar por:";
-            // 
-            // cmbFilter
-            // 
-            this.cmbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFilter.FormattingEnabled = true;
-            this.cmbFilter.Items.AddRange(new object[] {
-            "Categoria y tipos de riesgo",
-            "Poblaciones",
-            "Municipios",
-            "Distritos",
-            "Regiones",
-            "Estados"});
-            this.cmbFilter.Location = new System.Drawing.Point(86, 92);
-            this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(191, 24);
-            this.cmbFilter.TabIndex = 6;
             // 
             // General
             // 

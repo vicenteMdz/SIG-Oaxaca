@@ -79,7 +79,7 @@ namespace Sistema_de_Informacion_Geografico
 
         }
 
-        public void MarkPoints(double x, double y)
+        public void MarkPoints(double latitud, double longitud)
         {
             shapefile1 = axMap1.get_Shapefile(intHandler1);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
             shapefile1 = new Shapefile();
@@ -97,8 +97,8 @@ namespace Sistema_de_Informacion_Geografico
             Shape shp = new Shape();
             shp.Create(ShpfileType.SHP_POINT);
             MapWinGIS.Point pnt = new MapWinGIS.Point();
-            pnt.x = x;
-            pnt.y = y;
+            pnt.x = longitud;
+            pnt.y = latitud;
             int index = shp.numPoints;
             shp.InsertPoint(pnt, ref index);
             index = sf.NumShapes;

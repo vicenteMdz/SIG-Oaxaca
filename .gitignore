@@ -56,6 +56,11 @@ artifacts/
 # StyleCop
 StyleCopReport.xml
 
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
 # Files built by Visual Studio
 *_i.c
 *_p.c

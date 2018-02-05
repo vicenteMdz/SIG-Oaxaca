@@ -70,5 +70,10 @@ namespace Sistema_de_Informacion_Geografico
             }
             return acontecimientos;
         }
+
+        public static List<Acontecimiento> busquedaLibre(string parameter)
+        {
+            return null;
+        }
     }
 }

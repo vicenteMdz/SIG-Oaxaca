@@ -52,6 +52,9 @@ namespace Sistema_de_Informacion_Geografico
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
+            //set first item select cmbFilter
+            cmbFilter.SelectedIndex = 0;
             
             shapefile1.Open(@String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
 
@@ -192,6 +195,21 @@ namespace Sistema_de_Informacion_Geografico
             //(3) Print the result to the status toolbar.
             string pointLocation = String.Format("Cursor location ({0},{1}) ", X, Y);
             toolStripStatusLabel1.Text = pointLocation;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string condition = txtSearch.Text.ToUpper();
+            int filter = cmbFilter.SelectedIndex;
+            List<Acontecimiento> acontecimientos = Conexion.busquedaLibre(condition, filter);
+            if (acontecimientos.Count() == 0)
+            {
+                MessageBox.Show("No se encontraron coincidencias", "Aviso");
+            }
+            else
+            {
+
+            }
         }
 
     }

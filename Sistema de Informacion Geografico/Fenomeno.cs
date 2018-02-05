@@ -14,6 +14,11 @@ namespace Sistema_de_Informacion_Geografico
         private int idPoblacion;
         private string cp;
         private DateTime fechaHoraAcontecimiento;
+        private int idMunicipio;
+        private int idDistrito;
+        private int idRegion;
+        private int idEstado;
+        private string descripcion;
 
         public int IdAcontecimiento
         {
@@ -49,6 +54,36 @@ namespace Sistema_de_Informacion_Geografico
         {
             get { return fechaHoraAcontecimiento; }
             set { fechaHoraAcontecimiento = value; }
+        }
+
+        public int IdMunicipio
+        {
+            get { return idMunicipio; }
+            set { idMunicipio = value; }
+        }
+
+        public int IdDistrito
+        {
+            get { return idDistrito; }
+            set { idDistrito = value; }
+        }
+
+        public int IdRegion
+        {
+            get { return idRegion; }
+            set { idRegion = value; }
+        }
+
+        public int IdEstado
+        {
+            get { return idEstado; }
+            set { idEstado = value; }
+        }
+
+        public string Descripcion
+        {
+            get { return descripcion; }
+            set { descripcion = value; }
         }
 
     }

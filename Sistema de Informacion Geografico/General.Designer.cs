@@ -36,8 +36,10 @@
             this.toolZoomInt = new System.Windows.Forms.ToolStripButton();
             this.toolMove = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
@@ -77,20 +79,20 @@
             this.hundimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agritamientosDeTerrenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axMap1 = new AxMapWinGIS.AxMap();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axMap1)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -165,9 +167,11 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackgroundImage = global::Sistema_de_Informacion_Geografico.Properties.Resources.fondo;
+            this.splitContainer1.Panel1.Controls.Add(this.cmbFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
@@ -176,26 +180,43 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.axMap1);
             this.splitContainer1.Size = new System.Drawing.Size(1120, 445);
-            this.splitContainer1.SplitterDistance = 259;
+            this.splitContainer1.SplitterDistance = 277;
             this.splitContainer1.TabIndex = 6;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 423);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(277, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(149, 99);
+            this.button1.Location = new System.Drawing.Point(185, 122);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 29);
-            this.textBox1.TabIndex = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(12, 59);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(265, 29);
+            this.txtSearch.TabIndex = 2;
             // 
             // label1
             // 
@@ -215,7 +236,7 @@
             this.groupBox1.Controls.Add(this.menuStrip2);
             this.groupBox1.Controls.Add(this.menuStrip1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 155);
+            this.groupBox1.Location = new System.Drawing.Point(17, 175);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(242, 156);
             this.groupBox1.TabIndex = 0;
@@ -264,25 +285,25 @@
             // aireToolStripMenuItem
             // 
             this.aireToolStripMenuItem.Name = "aireToolStripMenuItem";
-            this.aireToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.aireToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aireToolStripMenuItem.Text = "Aire";
             // 
             // sueloToolStripMenuItem
             // 
             this.sueloToolStripMenuItem.Name = "sueloToolStripMenuItem";
-            this.sueloToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.sueloToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sueloToolStripMenuItem.Text = "Suelo";
             // 
             // aguaToolStripMenuItem
             // 
             this.aguaToolStripMenuItem.Name = "aguaToolStripMenuItem";
-            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.aguaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aguaToolStripMenuItem.Text = "Agua";
             // 
             // alimentosToolStripMenuItem
             // 
             this.alimentosToolStripMenuItem.Name = "alimentosToolStripMenuItem";
-            this.alimentosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.alimentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alimentosToolStripMenuItem.Text = "Alimentos";
             // 
             // menuStrip3
@@ -294,7 +315,7 @@
             this.toolStripMenuItem6});
             this.menuStrip3.Location = new System.Drawing.Point(12, 76);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(216, 25);
+            this.menuStrip3.Size = new System.Drawing.Size(217, 25);
             this.menuStrip3.TabIndex = 3;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -308,7 +329,7 @@
             this.toolStripMenuItem10,
             this.residuosPeligrososToolStripMenuItem});
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(208, 21);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(209, 21);
             this.toolStripMenuItem6.Text = "Riesgos Químicos-Tecnológicos";
             // 
             // toolStripMenuItem7
@@ -379,55 +400,55 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(209, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 22);
             this.toolStripMenuItem2.Text = "Huracanes";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(209, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 22);
             this.toolStripMenuItem3.Text = "Inundaciones";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(209, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 22);
             this.toolStripMenuItem4.Text = "Tormentas de Granizo";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(209, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 22);
             this.toolStripMenuItem5.Text = "Heladas y nevadas";
             // 
             // mareasDeTormentasToolStripMenuItem
             // 
             this.mareasDeTormentasToolStripMenuItem.Name = "mareasDeTormentasToolStripMenuItem";
-            this.mareasDeTormentasToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.mareasDeTormentasToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.mareasDeTormentasToolStripMenuItem.Text = "Mareas de tormentas";
             // 
             // vientosToolStripMenuItem
             // 
             this.vientosToolStripMenuItem.Name = "vientosToolStripMenuItem";
-            this.vientosToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.vientosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.vientosToolStripMenuItem.Text = "Vientos";
             // 
             // sequíasToolStripMenuItem
             // 
             this.sequíasToolStripMenuItem.Name = "sequíasToolStripMenuItem";
-            this.sequíasToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.sequíasToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.sequíasToolStripMenuItem.Text = "Sequías";
             // 
             // erosiónToolStripMenuItem
             // 
             this.erosiónToolStripMenuItem.Name = "erosiónToolStripMenuItem";
-            this.erosiónToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.erosiónToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.erosiónToolStripMenuItem.Text = "Erosión";
             // 
             // precipitaciónToolStripMenuItem
             // 
             this.precipitaciónToolStripMenuItem.Name = "precipitaciónToolStripMenuItem";
-            this.precipitaciónToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.precipitaciónToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.precipitaciónToolStripMenuItem.Text = "Precipitación";
             // 
             // menuStrip1
@@ -506,26 +527,36 @@
             this.axMap1.Location = new System.Drawing.Point(0, 0);
             this.axMap1.Name = "axMap1";
             this.axMap1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMap1.OcxState")));
-            this.axMap1.Size = new System.Drawing.Size(857, 445);
+            this.axMap1.Size = new System.Drawing.Size(839, 445);
             this.axMap1.TabIndex = 0;
             this.axMap1.MouseDownEvent += new AxMapWinGIS._DMapEvents_MouseDownEventHandler(this.axMap1_MouseDownEvent);
             this.axMap1.MouseMoveEvent += new AxMapWinGIS._DMapEvents_MouseMoveEventHandler(this.axMap1_MouseMoveEvent);
             // 
-            // statusStrip1
+            // label2
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 423);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(259, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Filtrar por:";
             // 
-            // toolStripStatusLabel1
+            // cmbFilter
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.cmbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilter.FormattingEnabled = true;
+            this.cmbFilter.Items.AddRange(new object[] {
+            "Categoria y tipos de riesgo",
+            "Poblaciones",
+            "Municipios",
+            "Distritos",
+            "Regiones",
+            "Estados"});
+            this.cmbFilter.Location = new System.Drawing.Point(86, 92);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(191, 24);
+            this.cmbFilter.TabIndex = 6;
             // 
             // General
             // 
@@ -547,6 +578,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
@@ -558,8 +591,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axMap1)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,11 +643,13 @@
         private System.Windows.Forms.ToolStripMenuItem hundimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agritamientosDeTerrenoToolStripMenuItem;
         private AxMapWinGIS.AxMap axMap1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ComboBox cmbFilter;
+        private System.Windows.Forms.Label label2;
 
     }
 }

@@ -118,6 +118,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SIGDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UtilsConstants.cs" />
     <Compile Include="Videos.cs">
       <SubType>Form</SubType>
     </Compile>

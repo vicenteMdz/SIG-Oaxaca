@@ -90,6 +90,7 @@
     <Compile Include="General.Designer.cs">
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Fenomeno.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,8 +8,8 @@ namespace Sistema_de_Informacion_Geografico
 {
     class UtilsConstants
     {
-        public const string SQL_BASE = "SELECT A.ID_FENOMENO, A.ID_CATEG_FENOMENO, A.COORD_SUCESO, A.ID_POBLADO, A.CP, A.FECHA_HORA_FENOMENO "
-            + "FROM [ACONTECIMIENTOS-FENOMENOS] A ";
+        public const string SQL_BASE = "SELECT A.ID_FENOMENO, A.ID_CATEG_FENOMENO, A.COORD_SUCESO, A.ID_POBLADO, A.CP, A.FECHA_HORA_FENOMENO, "
+            + "A.ID_MUNICIPIO, A.ID_DISTRITO, A.ID_REGION, A.ID_ESTADO, A.DESCRIPCION FROM [ACONTECIMIENTOS-FENOMENOS] A ";
 
         public const string SQL_FIND_USER = "select U.Id_Usuario, U.user_name, U.user_level, U.user_password from SIG_USERS U "
             + "where U.user_name='@USERNAME'and U.user_password='@PASSWORD'";

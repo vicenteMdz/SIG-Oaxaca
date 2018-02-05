@@ -60,15 +60,29 @@ namespace Sistema_de_Informacion_Geografico
 
             intHandler1 = axMap1.AddLayer(shapefile1, true);
 
-            MarkPoints(axMap1);
-
             //Cargar todos los acontecimientos
 
-
+            List<Acontecimiento> acontecimientos = Conexion.getAllAcontecimientos();
+            if (acontecimientos.Count() == 0)
+            {
+                MessageBox.Show("No hay registros de fenómenos ocurridos");
+            }
+            else
+            {
+                foreach(Acontecimiento ac in acontecimientos)
+                {
+                    Console.WriteLine(ac.CoordenadaSuceso);
+                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
+                    Console.WriteLine(coordenadas[0]);
+                    Console.WriteLine(coordenadas[1]);
+                    MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
+                }
+            }
+           // ToolTip(axMap1);
 
         }
 
-        public void MarkPoints(AxMap axMap1)
+        public void MarkPoints(double x, double y)
         {
             shapefile1 = axMap1.get_Shapefile(intHandler1);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
             shapefile1 = new Shapefile();
@@ -85,10 +99,10 @@ namespace Sistema_de_Informacion_Geografico
             Shape shp = new Shape();
             shp.Create(ShpfileType.SHP_POINT);
             MapWinGIS.Point pnt = new MapWinGIS.Point();
-            pnt.x = -96.5943562;
-            pnt.y = 16.3317796;
+            pnt.x = x;
+            pnt.y = y;
             Console.WriteLine("X:::: " + pnt.x);
-            Console.WriteLine("X:::: " + pnt.y);
+            Console.WriteLine("Y:::: " + pnt.y);
             int index = shp.numPoints;
             shp.InsertPoint(pnt, ref index);
             index = sf.NumShapes;
@@ -98,10 +112,6 @@ namespace Sistema_de_Informacion_Geografico
                 return;
             }
             axMap1.Redraw();
-            /*shapefile1.CollisionMode = tkCollisionMode.AllowCollisions;
-            axMap1.SendMouseDown = true;
-            axMap1.CursorMode = tkCursorMode.cmNone;
-            axMap1.MouseDownEvent += AxMap1MouseDownEvent;   // change MapEvents to axMap1*/
         }
         // <summary>
         // Opens a marker from the file
@@ -125,36 +135,85 @@ namespace Sistema_de_Informacion_Geografico
             }
             return null;
         }
+
         // <summary>
-        // Handles mouse down event and adds the marker
+        // Opens a shapefile, registers event handler
         // </summary>
-        public void AxMap1MouseDownEvent(object sender, _DMapEvents_MouseDownEvent e)
+        public void ToolTip(AxMap axMap1)
         {
-            if (e.button == 1)          // left button
+            string filename = String.Concat(path, "\\data-shp\\base\\Poligonos.shp");
+
+            if (!File.Exists(filename))
             {
-                Shapefile sf = axMap1.get_Shapefile(intHandler1);
-                Shape shp = new Shape();
-                shp.Create(ShpfileType.SHP_POINT);
-                MapWinGIS.Point pnt = new MapWinGIS.Point();
-                double x = 0.0;
-                double y = 0.0;
-                axMap1.PixelToProj(e.x, e.y, ref x, ref y);
-                pnt.x = x;
-                pnt.y = y;
-                Console.WriteLine("X:::: " + pnt.x);
-                Console.WriteLine("X:::: " + pnt.y);
-                int index = shp.numPoints;
-                shp.InsertPoint(pnt, ref index);
-                index = sf.NumShapes;
-                if (!sf.EditInsertShape(shp, ref index))
-                {
-                    MessageBox.Show("Failed to insert shape: " + sf.ErrorMsg[sf.LastErrorCode]);
-                    return;
-                }
-                axMap1.Redraw();
+                MessageBox.Show("Couldn't file the file: " + filename);
+                return;
+            }
+
+            Shapefile sf = new Shapefile();
+            sf.Open(filename, null);
+            if (!shapefile1.StartEditingShapes(true, null))
+            {
+                MessageBox.Show("Failed to start edit mode: " + shapefile1.Table.get_ErrorMsg(shapefile1.LastErrorCode));
+            }
+            else
+            {
+                shapefile1.UseQTree = true;
+                shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
+
+                axMap1.AddLayer(shapefile1, true);
+                axMap1.SendMouseMove = true;
+                axMap1.ShowRedrawTime = true;
+                axMap1.MapUnits = tkUnitsOfMeasure.umMeters;
+                axMap1.CurrentScale = 50000;
+                axMap1.CursorMode = tkCursorMode.cmNone;
+                axMap1.MouseMoveEvent += new AxMapWinGIS._DMapEvents_MouseMoveEventHandler(axMap2_MouseMoveEvent);  // change MapEvents to axMap1
+
+                int m_drawingHandle = axMap1.NewDrawing(tkDrawReferenceList.dlScreenReferencedList);
+                Labels labels = axMap1.get_DrawingLabels(m_drawingHandle);
+                labels.FrameVisible = true;
+                labels.FrameType = tkLabelFrameType.lfRectangle;
             }
         }
 
+        // <summary>
+        // Handles mouse move event. Determines which shape is under cursor. Calls drawing routine.
+        // </summary>
+        void axMap2_MouseMoveEvent(object sender, _DMapEvents_MouseMoveEvent e)
+        {
+            Labels labels = axMap1.get_DrawingLabels(0);
+            labels.Clear();
+
+            // it's assumed here that the layer we want to edit is the first 1 (with 0 index)
+            int layerHandle = axMap1.get_LayerHandle(0);
+            Shapefile sf = axMap1.get_Shapefile(layerHandle);
+            if (sf != null)
+            {
+                double projX = 0.0;
+                double projY = 0.0;
+                axMap1.PixelToProj(e.x, e.y, ref projX, ref projY);
+
+                object result = null;
+                Extents ext = new Extents();
+                ext.SetBounds(projX, projY, 0.0, projX, projY, 0.0);
+                if (sf.SelectShapes(ext, 0.0, SelectMode.INTERSECTION, ref result))
+                {
+                    int[] shapes = result as int[];
+                    if (shapes.Length == 1)
+                    {
+                        string s = "";
+                        for (int i = 0; i < sf.NumFields; i++)
+                        {
+                            s += sf.get_Field(i).Name + ": " + sf.get_CellValue(i, shapes[0]) + "\n";
+                        }
+                        labels.AddLabel(s, e.x + 80, e.y, 0.0, -1);
+
+                        Shape shape = sf.get_Shape(shapes[0]);
+                    }
+                }
+            }
+
+            axMap1.Refresh();
+        }
 
         private void axMap1_MouseDownEvent(object sender, AxMapWinGIS._DMapEvents_MouseDownEvent e)
         {

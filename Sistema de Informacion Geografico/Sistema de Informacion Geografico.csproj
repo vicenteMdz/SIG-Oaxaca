@@ -92,6 +92,7 @@
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
     <Compile Include="Fenomeno.cs" />
+    <Compile Include="Mappers.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>

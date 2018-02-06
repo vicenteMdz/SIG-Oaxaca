@@ -10,6 +10,9 @@ using System.Configuration;
 using System.Data.SqlTypes;
 using System.Globalization;
 using System.Data.OleDb;
+using System.Net;
+using System.IO;
+using System.Xml.Linq;
 
 namespace Sistema_de_Informacion_Geografico
 {
@@ -35,6 +38,50 @@ namespace Sistema_de_Informacion_Geografico
         public static void closeConnection()
         {
             SIGDB.Close();
+        }
+
+        public static void buscaCoordenadas()
+        {
+            openConnection();
+            SqlCommand command = new SqlCommand("select TOP 100 * from SIG_POBLADOS", SIGDB);
+
+            reader = command.ExecuteReader();
+            //MessageBox.Show("entrando");
+            int i = 0;
+            while (reader.Read())
+            {
+                int idpoblado = reader.GetInt32(0);
+                string nombrepoblado = reader.GetString(2);
+                string Query = "INSERT INTO SIG_COORDENADAS (ID_COORDENADA,ID_POBLADO,LATITUD,LONGITUD) "
+                                + "VALUES (" + i + "," + idpoblado + ", @LAT, @LONG)";
+
+                try
+                {
+                    string requestUri = string.Format("http://maps.googleapis.com/maps/api/geocode/xml?address={0}&sensor=false",
+                    Uri.EscapeDataString(nombrepoblado));
+
+                    WebRequest request = WebRequest.Create(requestUri);
+                    WebResponse response = request.GetResponse();
+                    XDocument xdoc = XDocument.Load(response.GetResponseStream());
+
+                    XElement result = xdoc.Element("GeocodeResponse").Element("result");
+                    XElement locationElement = result.Element("geometry").Element("location");
+                    XElement lat = locationElement.Element("lat");
+                    XElement lng = locationElement.Element("lng");
+                    String latitud = lat.Value.ToString();
+                    String longitud = lng.Value.ToString();
+                    Query = nombrepoblado +" INSERT INTO SIG_COORDENADAS (ID_COORDENADA,ID_POBLADO,LATITUD,LONGITUD) "
+                                + "VALUES (" + i + "," + idpoblado + ", " + latitud + ", " + longitud + ")";
+                    Console.WriteLine(Query);
+                }
+                catch (Exception ex)
+                {
+                    Query = "INSERT INTO SIG_COORDENADAS (ID_COORDENADA,ID_POBLADO,LATITUD,LONGITUD) "
+                                + "VALUES (" + i + "," + idpoblado + ", 0, 0)";
+                    Console.WriteLine(Query);
+                }
+            }
+            Console.WriteLine("fin");
         }
 
         public static User findUser(string user, string password)

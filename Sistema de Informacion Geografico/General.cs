@@ -56,9 +56,8 @@ namespace Sistema_de_Informacion_Geografico
             //set first item select cmbFilter
             cmbFilter.SelectedIndex = 0;
 
+            loadMapBase();
             //Cargar todos los acontecimientos
-            ToolTip(axMap1);
-
             List<Acontecimiento> acontecimientos = Conexion.getAllAcontecimientos();
             if (acontecimientos.Count() == 0)
             {
@@ -75,8 +74,18 @@ namespace Sistema_de_Informacion_Geografico
                     MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
                 }
             }
-            
 
+            //load tooltip event
+            ToolTip(axMap1);
+
+        }
+
+        public void loadMapBase()
+        {
+            shapefile1.Open(String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
+            shapefile1.StartEditingShapes(true, null);
+            shapefile1.UseQTree = true;
+            intHandler1 = axMap1.AddLayer(shapefile1, true);
         }
 
         public void MarkPoints(double latitud, double longitud)
@@ -137,25 +146,6 @@ namespace Sistema_de_Informacion_Geografico
         // </summary>
         public void ToolTip(AxMap axMap1)
         {
-            string filename = String.Concat(path, "\\data-shp\\base\\Poligonos.shp");
-
-            if (!File.Exists(filename))
-            {
-                MessageBox.Show("Couldn't file the file: " + filename);
-                return;
-            }
-
-            shapefile1.Open(filename, null);
-            if (!shapefile1.StartEditingShapes(true, null))
-            {
-                MessageBox.Show("Failed to start edit mode: " + shapefile1.Table.get_ErrorMsg(shapefile1.LastErrorCode));
-            }
-            else
-            {
-                shapefile1.UseQTree = true;
-                //shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
-
-                intHandler1 = axMap1.AddLayer(shapefile1, true);
                 axMap1.SendMouseMove = true;
                 axMap1.ShowRedrawTime = true;
                 axMap1.MapUnits = tkUnitsOfMeasure.umMeters;
@@ -168,7 +158,6 @@ namespace Sistema_de_Informacion_Geografico
                 labels.FrameVisible = true;
                 labels.FrameType = tkLabelFrameType.lfRectangle;
                 axMap1.ZoomToMaxExtents();
-            }
         }
 
         // <summary>
@@ -229,11 +218,22 @@ namespace Sistema_de_Informacion_Geografico
             List<Acontecimiento> acontecimientos = Conexion.busquedaLibre(condition, filter);
             if (acontecimientos.Count() == 0)
             {
+                axMap1.RemoveAllLayers();
+                loadMapBase();
                 MessageBox.Show("No se encontraron coincidencias", "Aviso");
             }
             else
             {
-
+                axMap1.RemoveAllLayers();
+                loadMapBase();
+                foreach (Acontecimiento ac in acontecimientos)
+                {
+                    Console.WriteLine(ac.CoordenadaSuceso);
+                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
+                    Console.WriteLine(coordenadas[0]);
+                    Console.WriteLine(coordenadas[1]);
+                    MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
+                }
             }
         }
 

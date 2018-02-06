@@ -316,5 +316,15 @@ namespace Sistema_de_Informacion_Geografico
             }
         }
 
+        private void netBarControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void netBarItem1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

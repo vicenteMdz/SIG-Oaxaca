@@ -69,9 +69,9 @@ namespace Sistema_de_Informacion_Geografico
                 {
                     Console.WriteLine(ac.CoordenadaSuceso);
                     string[] coordenadas = ac.CoordenadaSuceso.Split(',');
-                    Console.WriteLine(coordenadas[0]);
-                    Console.WriteLine(coordenadas[1]);
-                    MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
+                    double longitud = double.Parse(coordenadas[1].Replace(".", ","));
+                    double latitud = double.Parse(coordenadas[0].Replace(".", ","));
+                    MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);
                 }
             }
 
@@ -88,7 +88,7 @@ namespace Sistema_de_Informacion_Geografico
             intHandler1 = axMap1.AddLayer(shapefile1, true);
         }
 
-        public void MarkPoints(double latitud, double longitud)
+        public void MarkPoints(double latitud, double longitud, int tipoFenomeno)
         {
             shapefile1 = axMap1.get_Shapefile(intHandler1);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
             shapefile1 = new Shapefile();
@@ -101,7 +101,7 @@ namespace Sistema_de_Informacion_Geografico
             axMap1.set_LayerName(intHandler1, "6353");
             ShapeDrawingOptions options = shapefile1.DefaultDrawingOptions;
             options.PointType = tkPointSymbolType.ptSymbolPicture;
-            options.Picture = this.OpenMarker();
+            options.Picture = this.OpenMarker(tipoFenomeno);
             Shapefile sf = axMap1.get_Shapefile(intHandler1);
             Shape shp = new Shape();
             shp.Create(ShpfileType.SHP_POINT);
@@ -121,23 +121,102 @@ namespace Sistema_de_Informacion_Geografico
         // <summary>
         // Opens a marker from the file
         // </summary>
-        private MapWinGIS.Image OpenMarker()
+        private MapWinGIS.Image OpenMarker(int tipoFenomeno)
         {
-            if (!File.Exists(path + "\\data-shp\\base\\marker.png"))
+            string filename = path + "\\data-shp\\markers\\";
+            switch (tipoFenomeno)
             {
-                MessageBox.Show("Can't find the file: " + path);
+                case 1:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 2:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 3:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 4:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 5:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 6:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 7:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 8:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 9:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 10:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 11:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 12:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 13:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 14:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 15:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 16:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 17:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 18:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 19:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 20:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 21:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 22:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 23:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 24:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 25:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 26:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+                case 27:
+                    filename = String.Concat(filename, "marker.png");
+                    break;
+            }
+
+            MapWinGIS.Image img = new MapWinGIS.Image();
+            if (!img.Open(filename, ImageType.USE_FILE_EXTENSION, true, null))
+            {
+                MessageBox.Show(img.ErrorMsg[img.LastErrorCode]);
+                img.Close();
             }
             else
-            {
-                MapWinGIS.Image img = new MapWinGIS.Image();
-                if (!img.Open(path + "\\data-shp\\base\\marker.png", ImageType.USE_FILE_EXTENSION, true, null))
-                {
-                    MessageBox.Show(img.ErrorMsg[img.LastErrorCode]);
-                    img.Close();
-                }
-                else
-                    return img;
-            }
+                return img;
             return null;
         }
 
@@ -230,9 +309,9 @@ namespace Sistema_de_Informacion_Geografico
                 {
                     Console.WriteLine(ac.CoordenadaSuceso);
                     string[] coordenadas = ac.CoordenadaSuceso.Split(',');
-                    Console.WriteLine(coordenadas[0]);
-                    Console.WriteLine(coordenadas[1]);
-                    MarkPoints(double.Parse(coordenadas[0].Replace(".", ",")), double.Parse(coordenadas[1].Replace(".", ",")));
+                    double longitud = double.Parse(coordenadas[1].Replace(".", ","));
+                    double latitud = double.Parse(coordenadas[0].Replace(".", ","));
+                    MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);
                 }
             }
         }

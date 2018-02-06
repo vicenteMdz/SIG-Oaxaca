@@ -35,5 +35,9 @@ namespace Sistema_de_Informacion_Geografico
             + "WHERE UPPER(E.ID_ESTADO) LIKE '%@PARAMETER%';";
 
         public const string SQL_BY_CATEGORIA_RIESGO = " WHERE A.ID_CATEG_FENOMENO = @PARAMETER";
+
+        public const string SQL_BY_TIPO_RIESGO = "JOIN SIG_CAT_RIESGOS CR ON A.ID_CATEG_FENOMENO = CR.ID_CAT_RIESGO "
+            + "JOIN TIPOS_DE_RIESGO TR ON CR.ID_TIPO_RIESGO = TR.ID "
+            + "WHERE TR.ID= @PARAMETER;";
     }
 }

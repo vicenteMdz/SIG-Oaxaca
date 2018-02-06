@@ -340,29 +340,6 @@ namespace Sistema_de_Informacion_Geografico
             cargarBusqueda(acontecimientos);
         }
 
-        public void cargarBusqueda(List<Acontecimiento> acontecimientos)
-        {
-            if (acontecimientos.Count() == 0)
-            {
-                axMap1.RemoveAllLayers();
-                loadMapBase();
-                MessageBox.Show("No se encontraron coincidencias", "Aviso");
-            }
-            else
-            {
-                axMap1.RemoveAllLayers();
-                loadMapBase();
-                foreach (Acontecimiento ac in acontecimientos)
-                {
-                    Console.WriteLine(ac.CoordenadaSuceso);
-                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
-                    double longitud = double.Parse(coordenadas[1].Replace(".", ","));
-                    double latitud = double.Parse(coordenadas[0].Replace(".", ","));
-                    MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);
-                }
-            }
-        }
-
         private void netBarItem8_ItemClick(object sender, EventArgs e)
         {
             List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(8);
@@ -500,6 +477,29 @@ namespace Sistema_de_Informacion_Geografico
                 case "RSE":
                     cargarBusqueda(Conexion.findAcontecimientoPorTipoRiesgo(4));
                     break;
+            }
+        }
+
+        public void cargarBusqueda(List<Acontecimiento> acontecimientos)
+        {
+            if (acontecimientos.Count() == 0)
+            {
+                axMap1.RemoveAllLayers();
+                loadMapBase();
+                MessageBox.Show("No se encontraron coincidencias", "Aviso");
+            }
+            else
+            {
+                axMap1.RemoveAllLayers();
+                loadMapBase();
+                foreach (Acontecimiento ac in acontecimientos)
+                {
+                    Console.WriteLine(ac.CoordenadaSuceso);
+                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
+                    double longitud = double.Parse(coordenadas[1].Replace(".", ","));
+                    double latitud = double.Parse(coordenadas[0].Replace(".", ","));
+                    MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);
+                }
             }
         }
 

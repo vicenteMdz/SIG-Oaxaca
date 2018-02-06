@@ -76,7 +76,7 @@ namespace Sistema_de_Informacion_Geografico
             else
             {
                 shapefile0.UseQTree = true;
-                //shapefile0.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
+                shapefile0.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
 
                 intHandler0 = axMap1.AddLayer(shapefile0, true);
                 axMap1.SendMouseMove = true;

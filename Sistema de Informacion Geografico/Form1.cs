@@ -8,42 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data.SqlTypes;
-using System.Globalization;
-using System.Data.OleDb;
 using System.Security.Cryptography;
 
 namespace Sistema_de_Informacion_Geografico
 {
     public partial class Form1 : Form
     {
-        public SqlConnection SIGO;
-        SqlCommand cmd;
-        SqlDataReader dir;
-        public string connectionString;
-
-        public void declaraConexion()
-        {
-            connectionString = ConfigurationManager.ConnectionStrings["conectionbd"].ConnectionString;
-            SIGO = new SqlConnection(connectionString);
-        }
-        public void abrirConexion()
-        {
-            SIGO.Close();
-            SIGO.Open();
-        }
         public Form1()
         {
             InitializeComponent();
             try
             {
-                declaraConexion();
-                abrirConexion();
+                Conexion.createConecction();
+                Conexion.openConnection();
             }
-            catch (Exception ext) { MessageBox.Show(ext.ToString()); }
+            catch (Exception ext) 
+            { 
+                MessageBox.Show(ext.ToString());
+                Application.Exit();
+            }
         }
         
         private void btn_Iniciar_Sesion_Click(object sender, EventArgs e)
@@ -57,7 +40,6 @@ namespace Sistema_de_Informacion_Geografico
             { 
                 if(text_User.Text!="" && text_Passw.Text!="")
                 {
-                    abrirConexion();
                     string user = Encrypt.GetMD5(text_User.Text);
                     string password = Encrypt.GetMD5(text_Passw.Text);
                     User u = Conexion.findUser(user, password);

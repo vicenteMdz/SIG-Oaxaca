@@ -295,6 +295,53 @@ namespace Sistema_de_Informacion_Geografico
             string condition = txtSearch.Text.ToUpper();
             int filter = cmbFilter.SelectedIndex;
             List<Acontecimiento> acontecimientos = Conexion.busquedaLibre(condition, filter);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem1_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(1);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem2_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(2);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem3_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(3);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem4_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(4);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem5_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(5);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem6_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(6);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem7_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(7);
+            cargarBusqueda(acontecimientos);
+        }
+
+        public void cargarBusqueda(List<Acontecimiento> acontecimientos)
+        {
             if (acontecimientos.Count() == 0)
             {
                 axMap1.RemoveAllLayers();
@@ -316,14 +363,144 @@ namespace Sistema_de_Informacion_Geografico
             }
         }
 
-        private void netBarControl1_Click(object sender, EventArgs e)
+        private void netBarItem8_ItemClick(object sender, EventArgs e)
         {
-
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(8);
+            cargarBusqueda(acontecimientos);
         }
 
-        private void netBarItem1_ItemClick(object sender, EventArgs e)
+        private void netBarItem9_ItemClick(object sender, EventArgs e)
         {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(9);
+            cargarBusqueda(acontecimientos);
+        }
 
+        private void netBarItem10_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(10);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem11_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(11);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem12_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(12);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem13_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(13);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem14_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(14);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem15_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(15);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem16_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(16);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem17_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(17);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem18_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(18);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem19_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(19);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem20_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(21);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem21_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(20);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem22_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(22);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem23_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(23);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem24_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(24);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem25_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(25);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem26_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(26);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarItem27_ItemClick(object sender, EventArgs e)
+        {
+            List<Acontecimiento> acontecimientos = Conexion.findAcontecimientoPorCategoriaRiesgo(27);
+            cargarBusqueda(acontecimientos);
+        }
+
+        private void netBarControl1_ActiveGroupChanged(object sender, EventArgs e)
+        {
+            string tipoRiesgo = netBarControl1.ActiveGroup.Name;
+            switch (tipoRiesgo)
+            {
+                case "RG":
+                    cargarBusqueda(Conexion.findAcontecimientoPorTipoRiesgo(1));
+                    break;
+                case "RH":
+                    cargarBusqueda(Conexion.findAcontecimientoPorTipoRiesgo(2));
+                    break;
+                case "RQT":
+                    cargarBusqueda(Conexion.findAcontecimientoPorTipoRiesgo(3));
+                    break;
+                case "RSE":
+                    cargarBusqueda(Conexion.findAcontecimientoPorTipoRiesgo(4));
+                    break;
+            }
         }
 
     }

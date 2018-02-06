@@ -94,7 +94,7 @@
     <Compile Include="General.Designer.cs">
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fenomeno.cs" />
+    <Compile Include="Acontecimiento.cs" />
     <Compile Include="Mappers.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Principal.cs">
@@ -253,9 +253,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataAccess\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

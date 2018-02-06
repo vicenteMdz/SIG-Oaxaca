@@ -112,6 +112,22 @@ namespace Sistema_de_Informacion_Geografico
             return acontecimientos;
         }
 
+        public static List<Acontecimiento> findAcontecimientoPorTipoRiesgo(int tipoRiesgo)
+        {
+            openConnection();
+            StringBuilder query = new StringBuilder(UtilsConstants.SQL_BASE);
+            query.Append(UtilsConstants.SQL_BY_TIPO_RIESGO);
+            query.Replace("@PARAMETER", "" + tipoRiesgo);
+            cmd = new SqlCommand(query.ToString(), SIGDB);
+            reader = cmd.ExecuteReader();
+            List<Acontecimiento> acontecimientos = new List<Acontecimiento>();
+            while (reader.Read())
+            {
+                acontecimientos.Add(Mappers.acontecimientoMapper(reader));
+            }
+            return acontecimientos;
+        }
+
         public static List<Acontecimiento> findAcontecimientoPorCategoriaRiesgo(int idCategoria)
         {
             openConnection();

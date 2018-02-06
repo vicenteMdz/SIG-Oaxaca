@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_de_Informacion_Geografico
 {
-    class Acontecimiento
+    public class Acontecimiento
     {
         private int idAcontecimiento;
         private int idCategoriaAcontecimiento;

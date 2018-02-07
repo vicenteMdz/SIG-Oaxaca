@@ -77,6 +77,7 @@ namespace Sistema_de_Informacion_Geografico
             //load tooltip event
             ToolTip(axMap1);
 
+            axMap1.ZoomToMaxExtents();
         }
 
         public void loadMapBase()
@@ -126,85 +127,85 @@ namespace Sistema_de_Informacion_Geografico
             switch (tipoFenomeno)
             {
                 case 1:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_sismos.png");
                     break;
                 case 2:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_emisionesvolcanicas.png");
                     break;
                 case 3:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_tsunamis.png");
                     break;
                 case 4:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_inestabilidaddeladeras.png");
                     break;
                 case 5:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_hundimientos.png");
                     break;
                 case 6:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_erupciones.png");
                     break;
                 case 7:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_agrietamientos.png");
                     break;
                 case 8:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_huracanes.png");
                     break;
                 case 9:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_inundaciones.png");
                     break;
                 case 10:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_tormentasdegranizo.png");
                     break;
                 case 11:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_heladasynevadas.png");
                     break;
                 case 12:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_mareasdetormentas.png");
                     break;
                 case 13:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_vientos.png");
                     break;
                 case 14:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_sequias.png");
                     break;
                 case 15:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_erosion.png");
                     break;
                 case 16:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_precipitacion.png");
                     break;
                 case 17:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_derrames.png");
                     break;
                 case 18:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_exposiones.png");
                     break;
                 case 19:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_radiaciones.png");
                     break;
                 case 20:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_fugastoxicas.png");
                     break;
                 case 21:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_incendios.png");
                     break;
                 case 22:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_residuospeligrosos.png");
                     break;
                 case 23:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_epidemiasoplagas.png");
                     break;
                 case 24:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_contaminaciondeaire.png");
                     break;
                 case 25:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_contaminaciondesuelo.png");
                     break;
                 case 26:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_contaminaciondeagua.png");
                     break;
                 case 27:
-                    filename = String.Concat(filename, "marker.png");
+                    filename = String.Concat(filename, "marker_contaminaciondealimentos.png");
                     break;
             }
 
@@ -291,11 +292,11 @@ namespace Sistema_de_Informacion_Geografico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*string condition = txtSearch.Text.ToUpper();
+            string condition = txtSearch.Text.ToUpper();
             int filter = cmbFilter.SelectedIndex;
             List<Acontecimiento> acontecimientos = Conexion.busquedaLibre(condition, filter);
-            cargarBusqueda(acontecimientos);*/
-            Conexion.buscaCoordenadas();
+            cargarBusqueda(acontecimientos);
+            //Conexion.buscaCoordenadas();
         }
 
         private void netBarItem1_ItemClick(object sender, EventArgs e)

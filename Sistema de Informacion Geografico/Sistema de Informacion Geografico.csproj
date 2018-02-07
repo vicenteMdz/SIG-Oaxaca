@@ -238,11 +238,35 @@
     <None Include="images\fondo.jpg" />
     <None Include="bin\Debug\data-shp\markers\marker.png" />
     <None Include="images\symbology\marker.png" />
-    <Content Include="SIG.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\marker_agrietamientos.png" />
+    <None Include="Resources\marker_contaminaciondeagua.png" />
+    <None Include="Resources\marker_contaminaciondeaire.png" />
+    <None Include="Resources\marker_contaminaciondealimentos.png" />
+    <None Include="Resources\marker_contaminaciondesuelo.png" />
+    <None Include="Resources\marker_derrames.png" />
+    <None Include="Resources\marker_emisionesvolcanicas.png" />
+    <None Include="Resources\marker_epidemiasoplagas.png" />
+    <None Include="Resources\marker_erosion.png" />
+    <None Include="Resources\marker_erupsiones.png" />
+    <None Include="Resources\marker_exposiones.png" />
+    <None Include="Resources\marker_fugastoxicas.png" />
+    <None Include="Resources\marker_heladasynevadas.png" />
+    <None Include="Resources\marker_hundimientos.png" />
+    <None Include="Resources\marker_huracanes.png" />
+    <None Include="Resources\marker_incendios.png" />
+    <None Include="Resources\marker_inestabilidaddeladeras.png" />
+    <None Include="Resources\marker_inundaciones.png" />
+    <None Include="Resources\marker_mareasdetormentas.png" />
+    <None Include="Resources\marker_precipitacion.png" />
+    <None Include="Resources\marker_radiaciones.png" />
+    <None Include="Resources\marker_residuospeligrosos.png" />
+    <None Include="Resources\marker_sequias.png" />
+    <None Include="Resources\marker_sismos.png" />
+    <None Include="Resources\marker_tormentasdegranizo.png" />
+    <None Include="Resources\marker_tsunamis.png" />
+    <None Include="Resources\marker_vientos.png" />
+    <Content Include="SIG.mdf" />
     <Content Include="SIG_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SIG.mdf</DependentUpon>
     </Content>
   </ItemGroup>

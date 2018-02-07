@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Altas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Altas.Designer.cs">
+      <DependentUpon>Altas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ayuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,7 @@
       <DependentUpon>General.cs</DependentUpon>
     </Compile>
     <Compile Include="Acontecimiento.cs" />
+    <Compile Include="LabelVauleBean.cs" />
     <Compile Include="Mappers.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Principal.cs">
@@ -129,6 +136,9 @@
     <Compile Include="Videos.Designer.cs">
       <DependentUpon>Videos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Altas.resx">
+      <DependentUpon>Altas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ayuda.resx">
       <DependentUpon>ayuda.cs</DependentUpon>
     </EmbeddedResource>

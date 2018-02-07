@@ -67,7 +67,6 @@ namespace Sistema_de_Informacion_Geografico
             {
                 foreach(Acontecimiento ac in acontecimientos)
                 {
-                    Console.WriteLine(ac.CoordenadaSuceso);
                     string[] coordenadas = ac.CoordenadaSuceso.Split(',');
                     double longitud = double.Parse(coordenadas[1].Replace(".", ","));
                     double latitud = double.Parse(coordenadas[0].Replace(".", ","));
@@ -292,10 +291,11 @@ namespace Sistema_de_Informacion_Geografico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string condition = txtSearch.Text.ToUpper();
+            /*string condition = txtSearch.Text.ToUpper();
             int filter = cmbFilter.SelectedIndex;
             List<Acontecimiento> acontecimientos = Conexion.busquedaLibre(condition, filter);
-            cargarBusqueda(acontecimientos);
+            cargarBusqueda(acontecimientos);*/
+            Conexion.buscaCoordenadas();
         }
 
         private void netBarItem1_ItemClick(object sender, EventArgs e)
@@ -494,7 +494,6 @@ namespace Sistema_de_Informacion_Geografico
                 loadMapBase();
                 foreach (Acontecimiento ac in acontecimientos)
                 {
-                    Console.WriteLine(ac.CoordenadaSuceso);
                     string[] coordenadas = ac.CoordenadaSuceso.Split(',');
                     double longitud = double.Parse(coordenadas[1].Replace(".", ","));
                     double latitud = double.Parse(coordenadas[0].Replace(".", ","));

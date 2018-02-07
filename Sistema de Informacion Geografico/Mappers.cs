@@ -47,5 +47,18 @@ namespace Sistema_de_Informacion_Geografico
             ac.Descripcion = reader.GetString(10);
             return ac;
         }
+
+        /*
+         * Metodo que mapea el contenido del datareader a un clase entidad
+         * @Return un nuevo objeto LabelValueBean
+         * */
+        public static LabelVauleBean itemMapper(SqlDataReader reader)
+        {
+            LabelVauleBean item = new LabelVauleBean();
+            item.Id = reader.GetInt32(0);
+            item.Label = reader.GetString(1);
+            item.Selected = false;
+            return item;
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace Sistema_de_Informacion_Geografico
 
         private void registrarFenomenosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sistema_de_Informacion_Geografico.registroFenomenos regFenomenos = new Sistema_de_Informacion_Geografico.registroFenomenos();
+            Sistema_de_Informacion_Geografico.Altas regFenomenos = new Sistema_de_Informacion_Geografico.Altas();
             regFenomenos.MdiParent = this;
 
             regFenomenos.Show();

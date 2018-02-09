@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace Sistema_de_Informacion_Geografico
 {
     public partial class Principal : Form
     {
+
+        private string path = Directory.GetCurrentDirectory();
+
         public Principal()
         {
             InitializeComponent();
@@ -80,6 +85,11 @@ namespace Sistema_de_Informacion_Geografico
         {
             Videos ventana = new Videos();
             ventana.Show();
+        }
+
+        private void manualDeUsuariopdfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\data-shp\\MANUAL DE USUARIO SIG.pdf");
         }
     }
 }

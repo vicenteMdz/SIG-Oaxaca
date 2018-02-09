@@ -60,5 +60,18 @@ namespace Sistema_de_Informacion_Geografico
             item.Selected = false;
             return item;
         }
+
+        /*
+         * Metodo que mapea el contenido del datareader a un clase entidad
+         * @Return un nuevo objeto Coordenadas
+         * */
+        public static Coordenadas coordenadasMapper(SqlDataReader reader)
+        {
+            Coordenadas u = new Coordenadas();
+            u.Id = reader.GetInt32(0);
+            u.Latitud1 = System.Convert.ToDouble(reader.GetDecimal(1));
+            u.Longitud1 = System.Convert.ToDouble(reader.GetDecimal(2));
+            return u;
+        }
     }
 }

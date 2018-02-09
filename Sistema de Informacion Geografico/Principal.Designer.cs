@@ -98,6 +98,7 @@
             this.manualDeUsuariopdfToolStripMenuItem.Name = "manualDeUsuariopdfToolStripMenuItem";
             this.manualDeUsuariopdfToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.manualDeUsuariopdfToolStripMenuItem.Text = "Manual de usuario (pdf)";
+            this.manualDeUsuariopdfToolStripMenuItem.Click += new System.EventHandler(this.manualDeUsuariopdfToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -107,8 +108,8 @@
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.ayudaToolStripMenuItem.Text = "Acerca de";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // Principal

@@ -67,7 +67,7 @@ namespace Sistema_de_Informacion_Geografico
             {
                 foreach(Acontecimiento ac in acontecimientos)
                 {
-                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
+                    string[] coordenadas = ac.CoordenadaSuceso.Split(':');
                     double longitud = double.Parse(coordenadas[1].Replace(".", ","));
                     double latitud = double.Parse(coordenadas[0].Replace(".", ","));
                     MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);
@@ -495,7 +495,7 @@ namespace Sistema_de_Informacion_Geografico
                 loadMapBase();
                 foreach (Acontecimiento ac in acontecimientos)
                 {
-                    string[] coordenadas = ac.CoordenadaSuceso.Split(',');
+                    string[] coordenadas = ac.CoordenadaSuceso.Split(':');
                     double longitud = double.Parse(coordenadas[1].Replace(".", ","));
                     double latitud = double.Parse(coordenadas[0].Replace(".", ","));
                     MarkPoints(latitud, longitud, ac.IdCategoriaAcontecimiento);

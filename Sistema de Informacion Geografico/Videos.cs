@@ -19,12 +19,36 @@ namespace Sistema_de_Informacion_Geografico
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            entretenimiento ventana = new entretenimiento(1);
+            ventana.Show();
         }
 
         private void Videos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            entretenimiento ventana = new entretenimiento(2);
+            ventana.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            entretenimiento ventana = new entretenimiento(3);
+            ventana.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            entretenimiento ventana = new entretenimiento(4);
+            ventana.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

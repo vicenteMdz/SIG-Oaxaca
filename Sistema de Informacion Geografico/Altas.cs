@@ -13,14 +13,18 @@ using System.Configuration;
 using System.Data.SqlTypes;
 using System.Globalization;
 using System.Data.OleDb;
+using System.IO;
+using MapWinGIS;
+using AxMapWinGIS;
 
 namespace Sistema_de_Informacion_Geografico
 {
     public partial class Altas : Form
     {
-        SqlCommand cmd, cmd1, c;
-        SqlDataReader dr, dr1, d;
-        String dato, ID,idp;
+        MapWinGIS.Shapefile shapefile1;
+        int intHandler1;
+        private string path = Directory.GetCurrentDirectory();
+        private Coordenadas C = null;
 
         List<LabelVauleBean> itemsCategorias;
         List<LabelVauleBean> itemsRegiones;
@@ -90,6 +94,81 @@ namespace Sistema_de_Informacion_Geografico
             }
         }
 
+        private void Altas_Load(object sender, EventArgs e)
+        {
+            loadMapaBase();
+
+
+        }
+
+        public void loadMapaBase()
+        {
+            shapefile1 = new Shapefile();
+            shapefile1.Open(String.Concat(path, "\\data-shp\\base\\Poligonos.shp"), null);
+
+            shapefile1.StartEditingShapes(true, null);
+            shapefile1.UseQTree = true;
+
+            //intHandler1 = axMap1.AddLayer(shapefile1, true);
+
+            shapefile1.UseQTree = true;
+            shapefile1.Labels.Generate("[Name]", tkLabelPositioning.lpCentroid, false);
+
+            intHandler1 = axMap1.AddLayer(shapefile1, true);
+            axMap1.SendMouseMove = true;
+            axMap1.ShowRedrawTime = true;
+            axMap1.MapUnits = tkUnitsOfMeasure.umMeters;
+            axMap1.CurrentScale = 50000;
+            axMap1.CursorMode = tkCursorMode.cmNone;
+            axMap1.MouseMoveEvent += new AxMapWinGIS._DMapEvents_MouseMoveEventHandler(axMap2_MouseMoveEvent);  // change MapEvents to axMap1
+
+            int m_drawingHandle = axMap1.NewDrawing(tkDrawReferenceList.dlScreenReferencedList);
+            Labels labels = axMap1.get_DrawingLabels(m_drawingHandle);
+            labels.FrameVisible = true;
+            labels.FrameType = tkLabelFrameType.lfRectangle;
+            axMap1.ZoomToMaxExtents();
+        }
+
+        // <summary>
+        // Handles mouse move event. Determines which shape is under cursor. Calls drawing routine.
+        // </summary>
+        void axMap2_MouseMoveEvent(object sender, _DMapEvents_MouseMoveEvent e)
+        {
+            Labels labels = axMap1.get_DrawingLabels(0);
+            labels.Clear();
+
+            // it's assumed here that the layer we want to edit is the first 1 (with 0 index)
+            int layerHandle = axMap1.get_LayerHandle(0);
+            Shapefile sf = axMap1.get_Shapefile(layerHandle);
+            if (sf != null)
+            {
+                double projX = 0.0;
+                double projY = 0.0;
+                axMap1.PixelToProj(e.x, e.y, ref projX, ref projY);
+
+                object result = null;
+                Extents ext = new Extents();
+                ext.SetBounds(projX, projY, 0.0, projX, projY, 0.0);
+                if (sf.SelectShapes(ext, 0.0, SelectMode.INTERSECTION, ref result))
+                {
+                    int[] shapes = result as int[];
+                    if (shapes.Length == 1)
+                    {
+                        string s = "";
+                        for (int i = 0; i < 1; i++)
+                        {
+                            s += sf.get_Field(i).Name + ": " + sf.get_CellValue(i, shapes[0]) + "\n";
+                        }
+                        labels.AddLabel(s, e.x + 80, e.y, 0.0, -1);
+
+                        Shape shape = sf.get_Shape(shapes[0]);
+                    }
+                }
+            }
+
+            axMap1.Refresh();
+        }
+
         private void Distri_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = Distri.SelectedIndex;
@@ -137,8 +216,19 @@ namespace Sistema_de_Informacion_Geografico
             int index = Pobla.SelectedIndex;
             if (index != 0)
             {
-                string poblado = itemsPoblados[index].Label;
-                coordenadas = Conexion.getCoordinates(poblado);
+                int poblado = itemsPoblados[index].Id;
+                //coordenadas = Conexion.getCoordinates(poblado);
+                axMap1.RemoveAllLayers();
+                loadMapaBase();
+                C = Conexion.Coordenada(poblado);
+                if (C == null)
+                {
+                    MessageBox.Show("Imposible encontrar coordenadas para esta población.");
+                }
+                else
+                {
+                    MarkPoints(C.Latitud1, C.Longitud1);
+                }
             }
         }
         
@@ -146,9 +236,6 @@ namespace Sistema_de_Informacion_Geografico
         {
             if (validateFields())
             {
-                Random qq = new Random();
-                int m = qq.Next(1000);
-                int z = Convert.ToInt32(ID) + m;
                 Acontecimiento acontecimiento = new Acontecimiento();
                 acontecimiento.IdAcontecimiento = 0;
                 acontecimiento.IdCategoriaAcontecimiento = itemsCategorias[Categoria.SelectedIndex].Id;
@@ -160,6 +247,7 @@ namespace Sistema_de_Informacion_Geografico
                 acontecimiento.FechaHoraAcontecimiento = Fecha.Value;
                 acontecimiento.Descripcion = descripcion.Text;
                 acontecimiento.Cp = Codigo.Text;
+                coordenadas = System.Convert.ToString(C.Latitud1)+ ":" +System.Convert.ToString(C.Longitud1);
                 acontecimiento.CoordenadaSuceso = coordenadas;
                 if (Conexion.insertAcontecimiento(acontecimiento))
                 {
@@ -186,6 +274,7 @@ namespace Sistema_de_Informacion_Geografico
             Pobla.Text = "";
             Codigo.Text = "";
             Fecha.Text = "";
+            descripcion.Text = "";
         }
 
         public Boolean validateFields()
@@ -221,16 +310,90 @@ namespace Sistema_de_Informacion_Geografico
                 errorMesage += "\nIngresa el código postal del poblado.";
                 band++;
             }
+            if (C == null && Pobla.SelectedIndex != 0)
+            {
+                errorMesage += "\nLa poblacion seleccionada no tiene coordenadas, seleccione otra.";
+                band++;
+            }
             if (band == 0)
             {
                 return true;
-            }
+            }            
             else
             {
                 return false;
             }
         }
+        public void MarkPoints(double latitud, double longitud)
+        {
+            shapefile1 = axMap1.get_Shapefile(intHandler1);     // in case a copy of shapefile was created by GlobalSettings.ReprojectLayersOnAdding
+            shapefile1 = new Shapefile();
+            if (!shapefile1.CreateNewWithShapeID("", ShpfileType.SHP_POINT))
+            {
+                MessageBox.Show("Failed to create shapefile: " + shapefile1.ErrorMsg[shapefile1.LastErrorCode]);
+                return;
+            }
+            intHandler1 = axMap1.AddLayer(shapefile1, true);
+            axMap1.set_LayerName(intHandler1, "6353");
+            ShapeDrawingOptions options = shapefile1.DefaultDrawingOptions;
+            options.PointType = tkPointSymbolType.ptSymbolPicture;
+            options.Picture = this.OpenMarker();
+            Shapefile sf = axMap1.get_Shapefile(intHandler1);
+            Shape shp = new Shape();
+            shp.Create(ShpfileType.SHP_POINT);
+            MapWinGIS.Point pnt = new MapWinGIS.Point();
+            pnt.x = longitud;
+            pnt.y = latitud;
+            int index = shp.numPoints;
+            shp.InsertPoint(pnt, ref index);
+            index = sf.NumShapes;
+            if (!sf.EditInsertShape(shp, ref index))
+            {
+                MessageBox.Show("Failed to insert shape: " + sf.ErrorMsg[sf.LastErrorCode]);
+                return;
+            }
+            axMap1.Redraw();
+        }
+        private MapWinGIS.Image OpenMarker()
+        {
+            string filename = path + "\\data-shp\\markers\\";
+           
+                    filename = String.Concat(filename, "marker_sismos.png");
 
-        
+            MapWinGIS.Image img = new MapWinGIS.Image();
+            if (!img.Open(filename, ImageType.USE_FILE_EXTENSION, true, null))
+            {
+                MessageBox.Show(img.ErrorMsg[img.LastErrorCode]);
+                img.Close();
+            }
+            else
+                return img;
+            return null;
+        }
+
+        private void toolCursor_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmNone;
+        }
+
+        private void toolZoomExtent_Click(object sender, EventArgs e)
+        {
+            axMap1.ZoomToMaxExtents();
+        }
+
+        private void toolZoomOut_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmZoomOut;
+        }
+
+        private void toolZoomInt_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmZoomIn;
+        }
+
+        private void toolMove_Click(object sender, EventArgs e)
+        {
+            axMap1.CursorMode = MapWinGIS.tkCursorMode.cmPan;
+        }
     }
 }

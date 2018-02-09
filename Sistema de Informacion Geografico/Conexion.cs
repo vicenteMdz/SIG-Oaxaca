@@ -308,6 +308,22 @@ namespace Sistema_de_Informacion_Geografico
             }
         }
 
+        public static Coordenadas Coordenada(int idP)
+        {
+            openConnection();
+            Console.WriteLine(UtilsConstants.SQL_COORDENADAS_BY_POBLACION.Replace("@PARAMETER", "" + idP));
+            cmd = new SqlCommand(UtilsConstants.SQL_COORDENADAS_BY_POBLACION.Replace("@PARAMETER", "" + idP), SIGDB1);
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return Mappers.coordenadasMapper(reader);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public static Boolean insertAcontecimiento(Acontecimiento acontecimiento)
         {
             try

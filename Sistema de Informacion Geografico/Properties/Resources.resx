@@ -118,97 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="marker1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\symbology\marker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_agrietamientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_agrietamientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_contaminaciondeagua" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_contaminaciondeagua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_contaminaciondeaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_contaminaciondeaire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_contaminaciondealimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_contaminaciondealimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_contaminaciondesuelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_contaminaciondesuelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_derrames" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_derrames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_emisionesvolcanicas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_emisionesvolcanicas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_epidemiasoplagas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_epidemiasoplagas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_erosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_erosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_erupsiones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_erupsiones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_exposiones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_exposiones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_fugastoxicas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_fugastoxicas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_heladasynevadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_heladasynevadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_hundimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_hundimientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_huracanes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_huracanes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_incendios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_incendios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_inestabilidaddeladeras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_inestabilidaddeladeras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_inundaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_inundaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marker_mareasdetormentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_mareasdetormentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="marker_precipitacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_precipitacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marker_radiaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_radiaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marker_emisionesvolcanicas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_emisionesvolcanicas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marker_residuospeligrosos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_residuospeligrosos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marker_contaminaciondesuelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_contaminaciondesuelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marker_sequias" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_sequias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marker_fugastoxicas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_fugastoxicas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marker_sismos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marker_sismos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marker_contaminaciondealimentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_contaminaciondealimentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_exposiones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_exposiones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="marker_tormentasdegranizo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_tormentasdegranizo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="marker_erosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_erosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_hundimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_hundimientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_contaminaciondeaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_contaminaciondeaire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondovideos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fondovideos;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_derrames" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_derrames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_radiaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_radiaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_contaminaciondeagua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_contaminaciondeagua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_mareasdetormentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_mareasdetormentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="marker_tsunamis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_tsunamis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="marker_inestabilidaddeladeras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_inestabilidaddeladeras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="marker_vientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marker_vientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_residuospeligrosos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_residuospeligrosos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_inundaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_inundaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_huracanes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_huracanes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_erupsiones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_erupsiones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_agrietamientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_agrietamientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\symbology\marker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_sismos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_sismos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_epidemiasoplagas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_epidemiasoplagas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_sequias" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_sequias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_heladasynevadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_heladasynevadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marker_incendios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marker_incendios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="acercade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\acercade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

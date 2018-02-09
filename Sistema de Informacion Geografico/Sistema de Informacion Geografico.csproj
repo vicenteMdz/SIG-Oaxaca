@@ -82,6 +82,7 @@
       <DependentUpon>Capas.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Coordenadas.cs" />
     <Compile Include="entretenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +177,7 @@
     <EmbeddedResource Include="Videos.resx">
       <DependentUpon>Videos.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="images\fondovideos" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,6 +213,14 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
     <COMReference Include="MapWinGIS">
       <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
       <VersionMajor>4</VersionMajor>
@@ -226,6 +236,15 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
@@ -265,6 +284,7 @@
     <None Include="Resources\marker_tormentasdegranizo.png" />
     <None Include="Resources\marker_tsunamis.png" />
     <None Include="Resources\marker_vientos.png" />
+    <None Include="Resources\acercade.jpg" />
     <Content Include="SIG.mdf" />
     <Content Include="SIG_log.ldf">
       <DependentUpon>SIG.mdf</DependentUpon>
